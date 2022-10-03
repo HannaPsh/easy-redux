@@ -1,9 +1,10 @@
+import * as actions from '../actionsType.js/actionsType';
 export const countReducer = (state = 0, action) => {
   switch (action.type) {
-    case 'INCREASE':
-      return state + 1;
-    case 'DECREASE':
-      return state - 1;
+    case actions.INCREASE:
+      return state + action.payload;
+    case actions.DECREASE:
+      return state - action.payload;
     default:
       return state;
   }

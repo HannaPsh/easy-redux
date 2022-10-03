@@ -1,16 +1,19 @@
-export const increase = () => {
+import * as actions from '../actionsType.js/actionsType';
+export const increase = (nr) => {
   return {
-    type: 'INCREASE',
+    type: actions.INCREASE,
+    payload: nr,
   };
 };
-export const decreace = () => {
+export const decreace = (nr) => {
   return {
-    type: 'DECREASE',
+    type: actions.DECREASE,
+    payload: nr,
   };
 };
 
 export const toLoggIn = () => {
   return {
-    type: 'LOGGEDIN',
+    type: actions.LOGGEDIN,
   };
 };
